@@ -1,0 +1,7 @@
+{
+  "__comment": "Esto lo ponemos para cuando se suba a la nube sepa que instalar -> dependencies",
+  "dependencies": {
+    "aws-sdk": "^2.1646.0",
+    "uuid": "^10.0.0"
+  }
+}
