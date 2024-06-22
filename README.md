@@ -43,11 +43,14 @@ git push
 git push -u origin main
 serverless deploy --verbose```
 
-![seeTheElementDynamo.png]([https://prnt.sc/6bnK92Wz_Zw2](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.superporn.com%2Fes%2Fvideo%2Fprofesionales-de-la-doble-penetracion&psig=AOvVaw2HjNoP6DBsENFRpKv_xbA3&ust=1719163996711000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPDRtIzf74YDFQAAAAAdAAAAABAx))
+![seeTheElementDynamo.png]([https://prnt.sc/6bnK92Wz_Zw2](https://www.google.com/url?sa=i&x))
 
 ![Texto alternativo](seeTheElementDynamo.png)
 
-![seeTheElementDynamo](images/aaa.png) 
+![seeTheElementDynamo](images/aaa.png)
+
+
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https myoctocat.com/assets/images/base-octocat.svg)
 
 
 
