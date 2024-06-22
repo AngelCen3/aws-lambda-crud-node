@@ -43,6 +43,14 @@ git push
 git push -u origin main
 serverless deploy --verbose```
 
+![seeTheElementDynamo.png](https://prnt.sc/6bnK92Wz_Zw2)
+
+![Texto alternativo](seeTheElementDynamo.png)
+
+![seeTheElementDynamo.png](images/aaa.png) 
+
+
+
 ### Explicación de comandos
 
 - `aws --version`: Verifica la versión de AWS CLI instalada.
@@ -63,11 +71,6 @@ serverless deploy --verbose```
 - `git branch -M main`: Cambia el nombre de la rama actual a `main`.
 - `git push -u origin main`: Empuja la rama `main` y la establece como la predeterminada para futuras operaciones.
 
-![seeTheElementDynamo.png](https://prnt.sc/6bnK92Wz_Zw2)
-
-![Texto alternativo](seeTheElementDynamo.png)
-
-![seeTheElementDynamo.png](images/aaa.png) 
 
 
 
