@@ -62,3 +62,5 @@ serverless deploy --verbose```
 - `git push`: Empuja los cambios al repositorio remoto.
 - `git branch -M main`: Cambia el nombre de la rama actual a `main`.
 - `git push -u origin main`: Empuja la rama `main` y la establece como la predeterminada para futuras operaciones.
+
+![See The items in DynamoDB](https://github.com/tu-usuario/aws-lambda-crud-node/raw/main/images/seeTheElementDynamo.png)
