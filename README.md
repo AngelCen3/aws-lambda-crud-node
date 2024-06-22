@@ -63,4 +63,4 @@ serverless deploy --verbose```
 - `git branch -M main`: Cambia el nombre de la rama actual a `main`.
 - `git push -u origin main`: Empuja la rama `main` y la establece como la predeterminada para futuras operaciones.
 
-![See The items in DynamoDB](images/seeTheElementDynamo.png)
+![See The items in DynamoDB](seeTheElementDynamo.png)
