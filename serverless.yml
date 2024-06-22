@@ -19,14 +19,20 @@ functions:
     handler: src/hello.hello
     events:
       - httpApi:
-          path: /tasks  #Cuando visite este ruta se ejecutara la funtion addTask
+          path: /  #Cuando visite este ruta se ejecutara la funtion addTask
           method: get
   createTask:
     handler: src/addTask.addTask  # El primer src/addTask.addTask es el nombre del archivo y el segundo es el nombre de la fuction 
     events:
       - httpApi:
-          path: /tasks #Cuando visite este ruta se ejecutara la funtion addTask 
+          path: /tasks 
           method: post
+  getTasks:   #este es la funcion que creamos getTasks.js
+    handler: src/getTasks.getTasks  
+    events:
+      - httpApi:
+          path: /tasks 
+          method: get
            
 resources:
   Resources:

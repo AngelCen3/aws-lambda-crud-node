@@ -22,8 +22,8 @@ const addTask = async (event) => {
   }).promise() //Lo que hace put es que nos permite guardar un dato
 
   return{
-    statusCode: 200,
-    body: JSON.stringify(newTask)
+    status: 200,
+    body: JSON.stringify(newTask),
   } 
 };
 
