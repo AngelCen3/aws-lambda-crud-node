@@ -64,3 +64,6 @@ serverless deploy --verbose```
 - `git push -u origin main`: Empuja la rama `main` y la establece como la predeterminada para futuras operaciones.
 
 ![seeTheElementDynamo.png](https://prnt.sc/6bnK92Wz_Zw2)
+
+![Texto alternativo](seeTheElementDynamo.png)
+
