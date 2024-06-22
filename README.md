@@ -67,3 +67,7 @@ serverless deploy --verbose```
 
 ![Texto alternativo](seeTheElementDynamo.png)
 
+![seeTheElementDynamo.png](images\aaa.png) 
+
+
+
