@@ -2,6 +2,9 @@
 
 ## Algunos comandos que se utilizaron
 
+### Hay que tener mucho cuidado con el formato markdown ya que es como codigo si escribes
+### algo mal todo falla
+
 ```bash
 aws --version
 aws configure
