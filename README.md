@@ -41,7 +41,8 @@ git push
 git branch -M main
 git push
 git push -u origin main
-serverless deploy --verbose ```
+serverless deploy --verbose
+```
 
 ![seeTheElementDynamo.png]([https://prnt.sc/6bnK92Wz_Zw2](https://www.google.com/url?sa=i&x))
 
