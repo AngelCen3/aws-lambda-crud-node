@@ -1,5 +1,141 @@
 # AWS Lambda & DynamoDB CRUD | Serverles Framework con Nodejs y AWS
 
+-Author: Fazt
+
+Video: [AWS Lambda & DynamoDB CRUD | Serverles Framework con Nodejs y AWS](https://www.youtube.com/watch?v=wvux4WOU5dc&t=3942s)
+
+## Introducción
+
+En este tutorial aprenderás a crear un CRUD utilizando AWS Lambda y DynamoDB con el framework Serverless y Node.js. Este proyecto es útil para aquellos que desean aprender sobre el desarrollo de aplicaciones sin servidor (serverless).
+
+## Requisitos
+
+- Node.js instalado en tu sistema.
+- Una cuenta de AWS.
+- Conocimientos básicos de JavaScript y Node.js.
+
+## Instalación del Framework Serverless
+
+Primero, debemos instalar el framework Serverless de manera global en nuestro sistema:
+
+Luego, inicializamos un nuevo proyecto:   --->
+```bash
+serverless
+```
+
+Selecciona el template de AWS Node.js y sigue las instrucciones para configurar tu proyecto.
+
+## Configuración de AWS Credentials
+
+Para configurar tus credenciales de AWS, utiliza el comando:
+
+```bash
+serverless config credentials --provider aws --key TU_ACCESS_KEY --secret TU_SECRET_KEY
+```
+
+Creación de la Función Lambda
+
+Vamos a crear una función Lambda que manejará nuestras operaciones CRUD. En el archivo serverless.yml, define tu función de la siguiente manera:
+
+```yml
+functions:
+  create:
+    handler: handler.create
+    events:
+      - http:
+          path: create
+          method: post
+```
+
+### El archivo handler.js debe contener la lógica de tu función:
+
+```javascript
+'use strict';
+
+const AWS = require('aws-sdk');
+const uuid = require('uuid');
+
+const dynamoDb = new AWS.DynamoDB.DocumentClient();
+
+module.exports.create = async (event) => {
+  const timestamp = new Date().getTime();
+  const data = JSON.parse(event.body);
+
+  const params = {
+    TableName: process.env.DYNAMODB_TABLE,
+    Item: {
+      id: uuid.v1(),
+      text: data.text,
+      checked: data.checked,
+      createdAt: timestamp,
+      updatedAt: timestamp,
+    },
+  };
+
+  try {
+    await dynamoDb.put(params).promise();
+    return {
+      statusCode: 200,
+      body: JSON.stringify(params.Item),
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Could not create item' }),
+    };
+  }
+};
+```
+
+## Creación de la Tabla DynamoDB
+
+En el archivo serverless.yml, añade la configuración para crear una tabla DynamoDB:}
+
+```yml
+resources:
+  Resources:
+    TodosTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+```
+
+## Despliegue del Proyecto
+
+Para desplegar tu proyecto, utiliza el comando:
+
+```bash
+serverless deploy
+```
+
+## Prueba de la Función
+
+Para probar la función Lambda, puedes utilizar herramientas como Postman o realizar una petición HTTP desde tu navegador o terminal:
+
+```bash
+curl -X POST https://tu-api-id.execute-api.region.amazonaws.com/dev/create --data '{ "text": "Learn Serverless", "checked": true }'
+```
+
+## Conclusión
+
+En este tutorial, has aprendido cómo crear un CRUD utilizando AWS Lambda y DynamoDB con el framework Serverless y Node.js. Ahora puedes expandir este proyecto añadiendo más funciones y optimizando tu aplicación serverless.
+
+bash
+
+```bash
+npm install -g serverless
+```
+
 ## Algunos comandos que se utilizaron
 
 ```bash
@@ -67,7 +203,6 @@ serverless deploy --verbose```
 
 ![Texto alternativo](seeTheElementDynamo.png)
 
-![seeTheElementDynamo.png](images\aaa.png) 
-
+![seeTheElementDynamo.png](images\aaa.png)
 
 
