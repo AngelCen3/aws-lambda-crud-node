@@ -18,9 +18,20 @@ En este tutorial aprenderás a crear un CRUD utilizando AWS Lambda y DynamoDB co
 
 Primero, debemos instalar el framework Serverless de manera global en nuestro sistema:
 
-Luego, inicializamos un nuevo proyecto:   --->
 ```bash
-serverless
+serverless (Delete when you had information about ) Permite crear nuestras funciones localmente
+```
+
+Primero nos autenricamos en aws osea iniciamos sesion
+Servios a utilizar -->
+
+  -IAM -->Para crear roles de usuario, creamos un usuario
+  -Lambda ---> To upload fuctions
+  -Dynamo --> To save data
+
+```bash
+Instalamos aws clic (Search command)
+En la pagina aws clic podemos bajar un ejecutable
 ```
 
 Selecciona el template de AWS Node.js y sigue las instrucciones para configurar tu proyecto.
@@ -47,7 +58,7 @@ functions:
           method: post
 ```
 
-### El archivo handler.js debe contener la lógica de tu función:
+### El archivo handler.js debe contener la lógica de tu función
 
 ```javascript
 'use strict';
